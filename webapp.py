@@ -49,7 +49,7 @@ def renderPage5():
 
 @app.route('/page6',methods=['GET','POST'])
 def renderPage6():
-    session["luckyNumber"]=request.form['luckyNumber']
+    session["food"]=request.form['food']
     return render_template('page6.html')
 
 @app.route('/page7',methods=['GET','POST'])
@@ -57,6 +57,20 @@ def renderPage7():
     session["animal"]=request.form['animal']
     return render_template('page7.html')
 
+@app.route('/page8',methods=['GET','POST'])
+def renderPage8():
+    session["verb"]=request.form['verb']
+    return render_template('page8.html')
+
+@app.route('/page9',methods=['GET','POST'])
+def renderPage9():
+    session["adjective"]=request.form['adjective']
+    return render_template('page9.html')
+
+@app.route('/page10',methods=['GET','POST'])
+def renderPage10():
+    session[""]=request.form['']
+    return render_template('page10.html')
 
     
 if __name__=="__main__":
