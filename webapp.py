@@ -37,10 +37,27 @@ def renderPage3():
     session["birthCity"]=request.form['What city were you born in?']
     return render_template('page3.html')
 
-@app.route('/page3',methods=['GET','POST'])
-def renderPage3():
+@app.route('/page4',methods=['GET','POST'])
+def renderPage4():
+    session["favSeason"]=request.form['What is your favorite season?']
+    return render_template('page4.html')
+
+@app.route('/page5',methods=['GET','POST'])
+def renderPage5():
     session["luckyNumber"]=request.form['luckyNumber']
-    return render_template('page3.html')
+    return render_template('page5.html')
+
+@app.route('/page6',methods=['GET','POST'])
+def renderPage6():
+    session["luckyNumber"]=request.form['luckyNumber']
+    return render_template('page6.html')
+
+@app.route('/page7',methods=['GET','POST'])
+def renderPage7():
+    session["animal"]=request.form['animal']
+    return render_template('page7.html')
+
+
     
 if __name__=="__main__":
     app.run(debug=False)
