@@ -69,7 +69,7 @@ def renderPage9():
 
 @app.route('/page10',methods=['GET','POST'])
 def renderPage10():
-    session[""]=request.form['']
+    session["timeOfDay"]=request.form['timeOfday']
     return render_template('page10.html')
 
     
