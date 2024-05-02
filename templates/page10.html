@@ -1,1 +1,15 @@
 
+{% extends "layout.html" %}
+
+{% block title %}Page 10: timeOfDay{% endblock %}
+
+{% block content %}
+  <h1>Page 10: Time of day:</h1>
+
+ <form action={{ url_for("renderPagefinal") }} method="POST">
+  Time of day:<br>
+  <input type="text" name="timeOfDay">
+  <input type="submit" value="Submit">
+ </form> 
+
+{% endblock %}
