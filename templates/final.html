@@ -1,1 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}Page final--Now we know everything!{% endblock %}
+
+{% block content %}
+  <h1>Your story has been generated!</h1>
+
+<ul>
+ <li> One (weather) (timeOfDay) ... in (city), (firstname) was (hobby) with their (luckyNumber) (pet). (name) was eating a (food) when suddenly a (adjective) (animal) (verb) the (food).   They also had  {{ session['firstName'] }} </li>
+ <li> Your last name is: {{ session['lastName'] }} </li>
+ <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
+</ul>
+
+
+
+{% endblock %}
 
