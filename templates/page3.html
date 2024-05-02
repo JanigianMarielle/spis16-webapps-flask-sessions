@@ -1,16 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Page final--Now we know everything!{% endblock %}
+{% block title %}Page 3: Birth Year{% endblock %}
 
 {% block content %}
-  <h1>Your story has been generated!</h1>
+  <h1>Page 3: What year were you born?</h1>
 
-<ul>
- <li> One (weather) (timeOfDay) ... in (city), (firstname) was (hobby) with their (luckyNumber) (pet). (name) was eating a (food) when suddenly a (adjective) (animal) (verb) the (food).   They also had  {{ session['firstName'] }} </li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
-</ul>
-
-
+ <form action={{ url_for("renderPage4") }} method="POST">
+  Birth Year:<br>
+  <input type="text" name="birthYear">
+  <input type="submit" value="Submit">
+ </form> 
 
 {% endblock %}
