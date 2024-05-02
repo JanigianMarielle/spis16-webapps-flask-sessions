@@ -1,1 +1,14 @@
+{% extends "layout.html" %}
 
+{% block title %}Page 7: Animal{% endblock %}
+
+{% block content %}
+  <h1>Page 7: Name an animal:</h1>
+
+ <form action={{ url_for("renderPage8") }} method="POST">
+ Animal:<br>
+  <input type="text" name="animal">
+  <input type="submit" value="Submit">
+ </form> 
+
+{% endblock %}
