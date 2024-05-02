@@ -1,1 +1,14 @@
+{% extends "layout.html" %}
 
+{% block title %}Page 4: Season{% endblock %}
+
+{% block content %}
+  <h1>Page 4: What's your favorite season:</h1>
+
+ <form action={{ url_for("renderPage5") }} method="POST">
+  Favorite Season:<br>
+  <input type="text" name="favoriteSeason">
+  <input type="submit" value="Submit">
+ </form> 
+
+{% endblock %}
