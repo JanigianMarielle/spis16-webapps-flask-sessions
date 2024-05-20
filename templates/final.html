@@ -6,9 +6,9 @@
   <h1>Your story has been generated!</h1>
 
 <ul>
- <li> One (weather) (timeOfDay) ... in (city), (firstname) was (hobby) with their (luckyNumber) (pet). (name) was eating a (food) when suddenly a (adjective) (animal) (verb) the (food).   They also had  {{ session['firstName'] }} </li>
- <li> Your last name is: {{ session['lastName'] }} </li>
- <li> Your favorite color is: {{ session['favoriteColor'] }} </li>
+ <li> One (weather) {{session["timeOfday"]}} ... in (city), {{session["firstName"]}} {{session["lastName"]}} was  {{session["verb"]}} with their 
+ {{session["luckyNumber"]}}   {{session["animal"]}} all named {{session['lastName']}}. {{session["firstName"]}} 
+ was eating a  when suddenly a {{ session['favoriteColor'] }} {{session["food"]}} {{session['adjective']}} {{session["animal"]}} {{session["verb"]}} the {{session["food"]}}. 
 </ul>
 
 

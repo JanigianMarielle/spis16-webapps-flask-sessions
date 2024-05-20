@@ -28,50 +28,65 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    session["firstname"]=request.form['firstname?']
-    session["favoriteColor"]=request.form['favoriteColor']
-    return render_template('page2.html')
+	if "firstName" not in session:
+    	session["firstName"]=request.form['firstName']
+    	session["lastName"]=request.form['lastName']
+	return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    session["birthCity"]=request.form['What city were you born in?']
+	if "birthCity" not in session:
+   		session["birthCity"]=request.form['birthCity']
     return render_template('page3.html')
-
+    
 @app.route('/page4',methods=['GET','POST'])
 def renderPage4():
-    session["favSeason"]=request.form['What is your favorite season?']
+	if "birthYear" not in session:
+    	session["birthYear"]=request.form['birthYear']
     return render_template('page4.html')
 
 @app.route('/page5',methods=['GET','POST'])
 def renderPage5():
-    session["luckyNumber"]=request.form['luckyNumber']
+	if "favSeason" not in session:
+    	session["favSeason"]=request.form['favSeason']
     return render_template('page5.html')
 
 @app.route('/page6',methods=['GET','POST'])
 def renderPage6():
-    session["food"]=request.form['food']
+	if "luckyNumber" not in session:
+    	session["luckyNumber"]=request.form['luckyNumber']
     return render_template('page6.html')
 
 @app.route('/page7',methods=['GET','POST'])
 def renderPage7():
-    session["animal"]=request.form['animal']
+	if "food" not in session:
+    	session["food"]=request.form['food']
     return render_template('page7.html')
 
 @app.route('/page8',methods=['GET','POST'])
 def renderPage8():
-    session["verb"]=request.form['verb']
+	if "animal" not in session:
+  	  session["animal"]=request.form['animal']
     return render_template('page8.html')
 
 @app.route('/page9',methods=['GET','POST'])
 def renderPage9():
-    session["adjective"]=request.form['adjective']
+	if "verb" not in session:
+    	session["verb"]=request.form['verb']
     return render_template('page9.html')
 
 @app.route('/page10',methods=['GET','POST'])
 def renderPage10():
-    session["timeOfDay"]=request.form['timeOfday']
+	if "adjective" not in session:
+    	session["adjective"]=request.form['adjective']
     return render_template('page10.html')
+
+@app.route('/page11',methods=['GET','POST'])
+def renderFinal():
+	if "timeOfDay" not in session:
+    	session["timeOfday"]=request.form['timeOfday']
+    return render_template('final.html')
 
     
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
