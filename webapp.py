@@ -85,6 +85,10 @@ def renderPage10():
 def renderFinal():
 	if "timeOfDay" not in session:
 		session["timeOfday"]=request.form['timeOfday']
+	return redirect('/story')
+	
+@app.route('/story',methods=['GET'])
+def renderStory():
 	return render_template('final.html')
 
     
